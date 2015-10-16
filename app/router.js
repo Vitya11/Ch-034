@@ -3,13 +3,11 @@ define(function(require) {
 
     var CMS = require("CMS"),
         Courses = require("modules/course/index"),
-        Register = require("modules/register/index"),
 
     Router = Backbone.Router.extend({
         initialize: function() {
             this.core = CMS.CoreView;
             this.courses = new Courses.Collection();
-            this.register = new Register.Model();
         },
 
         routes: {
@@ -18,7 +16,7 @@ define(function(require) {
         },
 
         index: function() {
-            new Register.View( {model: this.register} );
+            
         },
 
         courses: function(currentPage) {
