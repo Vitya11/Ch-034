@@ -26,7 +26,7 @@ define(function(require) {
                 params: groupParams
             });
 
-            this.vacanciesView = new VacanciesModule.Views.Vacancies({collection: new VacanciesModule.Collection()});
+            this.vacanciesView = new VacanciesModule.VacanciesView({collection: new VacanciesModule.Collection()});
 
             this.render();
         },
